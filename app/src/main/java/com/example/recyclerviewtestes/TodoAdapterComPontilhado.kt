@@ -29,18 +29,25 @@ class TodoAdapterComPontilhado(
         return todos.size
     }
 
-
     override fun onBindViewHolder(holder: TodoViewVolderComPontilhado, position: Int) {
 
         todos[position].run {
             val textTitle = todos[position].title
             val textDescription = todos[position].description
+            val status = todos[position].isChecked
 
 
 
             holder.run {
                 tvTitle.text = textTitle
                 tvDescription.text = textDescription
+
+                if (status) {
+                    imagemStatus.setImageResource(R.drawable.application_completed)
+                } else {
+                    imagemStatus.setImageResource(R.drawable.application_not_completed)
+                }
+
 //                tvDescription.visibility = View.GONE
 
                 val isLastItem = getItemCount() - 1 == position
@@ -48,7 +55,7 @@ class TodoAdapterComPontilhado(
                 if (isLastItem) {
                     holder.also {
                         it.pontilhado.visibility = View.GONE
-                       // it.tvDescription.visibility = View.GONE
+                        // it.tvDescription.visibility = View.GONE
                     }
                 }
 

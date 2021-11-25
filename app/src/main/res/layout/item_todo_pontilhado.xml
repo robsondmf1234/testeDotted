@@ -24,13 +24,34 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+
         <View
             android:id="@+id/pontilhado"
+            android:layout_width="3dp"
+            android:layout_height="0dp"
+            android:background="@drawable/retangulo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/imgIconTracking2"
+            app:layout_constraintStart_toStartOf="@id/imgIconTracking2"
+            app:layout_constraintTop_toBottomOf="@id/imgIconTracking2"/>
+
+        <!--    <View
+                android:id="@+id/pontilhado"
+                android:layout_width="1dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/dotted"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/imgIconTracking2"
+                app:layout_constraintStart_toStartOf="@id/imgIconTracking2"
+                app:layout_constraintTop_toBottomOf="@id/imgIconTracking2" />-->
+
+
+        <View
+            android:id="@+id/etapaCompleta"
             android:layout_width="1dp"
             android:layout_height="0dp"
             android:layout_marginTop="5dp"
-            android:background="@drawable/dotted"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@id/imgIconTracking2"
             app:layout_constraintStart_toStartOf="@id/imgIconTracking2"
             app:layout_constraintTop_toBottomOf="@id/imgIconTracking2" />
@@ -78,7 +99,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@id/tvBottomSheetItem"
             app:layout_constraintTop_toBottomOf="@id/tvBottomSheetItem"
-            tools:text="Aplique em ações Petrobras PET3" />
+            tools:text="Resumo aqui" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

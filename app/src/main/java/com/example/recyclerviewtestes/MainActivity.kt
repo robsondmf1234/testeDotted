@@ -34,36 +34,26 @@ class MainActivity : AppCompatActivity() {
 */
 
         var todoListPontilhado = mutableListOf(
-            TodoComPontilhado("Tarefa 1", "Teste"),
-            TodoComPontilhado("Tarefa 2", "Teste"),
-            TodoComPontilhado("Tarefa 3", "Teste"),
-            TodoComPontilhado("Tarefa 4", "Teste"),
-            TodoComPontilhado("Tarefa 5", "Teste"),
-            TodoComPontilhado("Tarefa 6", "Teste"),
-            TodoComPontilhado("Tarefa 7", "Teste"),
-            TodoComPontilhado("Tarefa 8", "Teste"),
-            TodoComPontilhado("Tarefa 9", "Teste"),
-            TodoComPontilhado("Tarefa 10", "Teste"),
-            TodoComPontilhado("Tarefa 1", "Teste"),
-            TodoComPontilhado("Tarefa 2", "Teste"),
-            TodoComPontilhado("Tarefa 3", "Teste"),
-            TodoComPontilhado("Tarefa 4", "Teste"),
-            TodoComPontilhado("Tarefa 5", "Teste"),
-            TodoComPontilhado("Tarefa 6", "Teste"),
-            TodoComPontilhado("Tarefa 7", "Teste"),
-            TodoComPontilhado("Tarefa 8", "Teste"),
-            TodoComPontilhado("Tarefa 9", "Teste"),
-            TodoComPontilhado("Tarefa 10", "Teste"),
-            TodoComPontilhado("Tarefa 1", "Teste"),
-            TodoComPontilhado("Tarefa 2", "Teste"),
-            TodoComPontilhado("Tarefa 3", "Teste"),
-            TodoComPontilhado("Tarefa 4", "Teste"),
-            TodoComPontilhado("Tarefa 5", "Teste"),
-            TodoComPontilhado("Tarefa 6", "Teste"),
-            TodoComPontilhado("Tarefa 7", "Teste"),
-            TodoComPontilhado("Tarefa 8", "Teste"),
-            TodoComPontilhado("Tarefa 9", "Teste"),
-            TodoComPontilhado("Tarefa 10", "Teste")
+            TodoComPontilhado("Tarefa 1", "Teste", true),
+            TodoComPontilhado("Tarefa 2", "Teste", true),
+            TodoComPontilhado("Tarefa 3", "Teste", true),
+            TodoComPontilhado("Tarefa 4", "Teste", false),
+            TodoComPontilhado("Tarefa 5", "Teste", true),
+            TodoComPontilhado("Tarefa 7", "Teste", true),
+            TodoComPontilhado("Tarefa 8", "Teste", true),
+            TodoComPontilhado("Tarefa 9", "Teste", true),
+            TodoComPontilhado("Tarefa 9", "Teste", true),
+            TodoComPontilhado("Tarefa 10", "Teste", true),
+            TodoComPontilhado("Tarefa 1", "Teste", true),
+            TodoComPontilhado("Tarefa 2", "Teste", true),
+            TodoComPontilhado("Tarefa 3", "Teste", true),
+            TodoComPontilhado("Tarefa 4", "Teste", true),
+            TodoComPontilhado("Tarefa 5", "Teste", true),
+            TodoComPontilhado("Tarefa 6", "Teste", true),
+            TodoComPontilhado("Tarefa 7", "Teste", true),
+            TodoComPontilhado("Tarefa 8", "Teste", true),
+            TodoComPontilhado("Tarefa 9", "Teste", true),
+            TodoComPontilhado("Tarefa 10", "Teste", true)
         )
 
         val adapter = TodoAdapterComPontilhado(todoListPontilhado)
@@ -72,7 +62,7 @@ class MainActivity : AppCompatActivity() {
 
         btnAddTodo.setOnClickListener {
             val titulo: String = edtTodo.text.toString()
-            val todo = TodoComPontilhado(titulo, "Descrição")
+            val todo = TodoComPontilhado(titulo, "Descrição", false)
             todoListPontilhado.add(todo)
 
 //            todoListPontilhado.clear()
